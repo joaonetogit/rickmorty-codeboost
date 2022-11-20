@@ -1,8 +1,15 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { CardCharacter } from '../CardCharacter';
-import { ContainerApp, ContentCharacters, HeaderApp, Loader } from './styles';
+import {
+  Background,
+  ContainerApp,
+  ContentCharacters,
+  HeaderApp,
+  Loader,
+} from './styles';
 import IconLoader from '../../assets/loader.gif';
+import Logo from '../../assets/logo.png';
 export function Application() {
   const [numberCharacters, setNumberCharacters] = useState('');
   const [characters, setCharacters] = useState([]);
@@ -23,6 +30,7 @@ export function Application() {
 
   return (
     <>
+      <Background />
       {isLoader && (
         <Loader>
           <img src={IconLoader} alt="" />
@@ -30,8 +38,10 @@ export function Application() {
       )}
       <ContainerApp>
         <HeaderApp>
-          <h1>Rick and Morty</h1>
-          <span>N de personagens: {numberCharacters}</span>
+          <figure className="logo">
+            <img src={Logo} alt="" />
+          </figure>
+          <span>Número de personagens: {numberCharacters}</span>
         </HeaderApp>
         <ContentCharacters>
           <div>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import img from '../../assets/bg.jpg';
 
 export const ContainerApp = styled.div`
   width: 100%;
@@ -15,13 +16,19 @@ export const HeaderApp = styled.div`
   margin-bottom: 1.6rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+  }
+
   h1 {
     font-size: 3.2rem;
   }
 
   span {
     font-size: 1.6rem;
-    opacity: 0.6;
+    opacity: 0.75;
   }
 `;
 
@@ -30,6 +37,18 @@ export const ContentCharacters = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1.6rem;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 500px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   button {
@@ -62,4 +81,15 @@ export const Loader = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #040011;
+`;
+
+export const Background = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(${img});
+  z-index: -1;
+  opacity: 0.35;
 `;

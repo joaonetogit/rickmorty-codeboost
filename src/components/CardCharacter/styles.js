@@ -6,6 +6,14 @@ export const ContainerCard = styled.div`
   border-radius: 0.4rem;
   padding: 2rem;
 
+  &:hover {
+    .image {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
   .image {
     width: 100%;
     height: 24.3rem;
@@ -16,6 +24,7 @@ export const ContainerCard = styled.div`
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: all 0.3s ease;
     }
   }
 
