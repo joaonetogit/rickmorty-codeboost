@@ -16,6 +16,13 @@ export function Application() {
   const [page, setPage] = useState(1);
   const [countPages, setCountPages] = useState('');
   const [isLoader, setIsLoader] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsLoader(false);
+    }, 1500);
+  }, []);
+
   useEffect(() => {
     axios
       .get(`https://rickandmortyapi.com/api/character?page=${page}`)
@@ -24,7 +31,6 @@ export function Application() {
         const array = [...characters, ...response.data.results];
         setCharacters(array);
         setCountPages(response.data.info.pages);
-        setIsLoader(false);
       });
   }, [page]);
 
@@ -38,13 +44,15 @@ export function Application() {
       )}
       <ContainerApp>
         <HeaderApp>
-          <figure className="logo">
+          <figure className="logo" data-aos="fade-right" data-aos-delay="1000">
             <img src={Logo} alt="" />
           </figure>
-          <span>Número de personagens: {numberCharacters}</span>
+          <span data-aos="fade-left" data-aos-delay="1000">
+            Número de personagens: {numberCharacters}
+          </span>
         </HeaderApp>
         <ContentCharacters>
-          <div>
+          <div data-aos="fade-up" data-aos-delay="1000">
             {characters &&
               characters.map(({ image, name, species, gender }, index) => {
                 return (
