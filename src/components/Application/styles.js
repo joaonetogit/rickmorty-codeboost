@@ -55,13 +55,13 @@ export const ContentCharacters = styled.div`
     display: block;
     font-size: 1.8rem;
     line-height: 6.5rem;
-    background-color: #5b1fe6;
+    background-color: rgb(0, 181, 204);
     border-radius: 0.6rem;
     width: 30rem;
     margin: 0 auto;
     margin-top: 4.8rem;
     cursor: pointer;
-    border: none;
+    border: 4px solid #b2df28;
     transition: all 0.3s ease;
 
     &:hover {
@@ -89,7 +89,8 @@ export const Background = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(${img});
+  background: url(${img}) no-repeat center center;
+  background-size: cover;
   z-index: -1;
   opacity: 0.35;
 `;
