@@ -1,13 +1,11 @@
 import React from 'react';
 import { LoadMoreApp } from './styles';
 
-function LoadMore({ page, setPage }) {
+function LoadMore() {
   return (
     <LoadMoreApp
       type="button"
-      onClick={() => {
-        setPage(page + 1);
-      }}
+      onClick={() => alert('Carregar mais')}
     >
       Carregar mais
     </LoadMoreApp>

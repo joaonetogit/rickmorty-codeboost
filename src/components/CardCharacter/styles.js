@@ -42,6 +42,8 @@ export const CardName = styled.h3`
 export const CardDetails = styled.ul`
   list-style: none;
   display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 `;
 
 export const CardDetailsItem = styled.li`

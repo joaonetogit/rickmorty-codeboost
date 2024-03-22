@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: 'airbnb',
+  extends: ['airbnb', 'plugin:@tanstack/eslint-plugin-query/recommended'],
   overrides: [
     {
       env: {
@@ -19,7 +19,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react'],
+  plugins: ['react', '@tanstack/query'],
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',

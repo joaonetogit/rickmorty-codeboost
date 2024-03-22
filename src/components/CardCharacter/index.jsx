@@ -20,11 +20,11 @@ function CardCharacter({
         <CardDetails>
           <CardDetailsItem>
             Genre:
-            {genre}
+            {` ${genre}`}
           </CardDetailsItem>
           <CardDetailsItem>
             Specie:
-            {specie}
+            {` ${specie}`}
           </CardDetailsItem>
         </CardDetails>
       </CardInfo>

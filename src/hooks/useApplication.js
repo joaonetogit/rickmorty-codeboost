@@ -1,35 +1,24 @@
+import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
 
 const useApplication = () => {
-  const [numberCharacters, setNumberCharacters] = useState(null);
-  const [characters, setCharacters] = useState([]);
-  const [page, setPage] = useState(1);
-  const [countPages, setCountPages] = useState(null);
-  const [isLoader, setIsLoader] = useState(true);
-
   const URL_BASE = 'https://rickandmortyapi.com/api/character';
 
-  useEffect(() => {
-    axios
-      .get(`${URL_BASE}?page=${page}`)
-      .then((response) => {
-        setIsLoader(true);
-        setNumberCharacters(response.data.info.count);
-        const array = [...characters, ...response.data.results];
-        setCharacters(array);
-        setCountPages(response.data.info.pages);
-      })
-      .finally(() => setIsLoader(false));
-  }, [page]);
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ['characters', URL_BASE],
+    queryFn: async () => {
+      const response = await axios.get(`${URL_BASE}`);
+      return response.data;
+    },
+  });
 
   return {
-    numberCharacters,
-    characters,
-    page,
-    countPages,
-    isLoader,
-    setPage,
+    numberCharacters: data?.info.count || null,
+    characters: data?.results || [],
+    page: data?.info.page || 1,
+    countPages: data?.info.pages || null,
+    isLoader: isLoading,
+    isError,
   };
 };
 
