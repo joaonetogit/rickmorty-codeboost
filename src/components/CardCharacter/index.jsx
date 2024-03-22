@@ -1,18 +1,35 @@
-import { ContainerCard } from './styles';
+import {
+  CardContainer,
+  CardDetails,
+  CardDetailsItem,
+  CardImage,
+  CardInfo,
+  CardName,
+} from './styles';
 
-export function CardCharacter({ image, name, genre, specie }) {
+function CardCharacter({
+  image, name, genre, specie,
+}) {
   return (
-    <ContainerCard>
-      <div className="image">
-        <img src={image} alt="" />
-      </div>
-      <div className="info">
-        <h3 className="name">{name}</h3>
-        <ul className="details">
-          <li>Genre: {genre}</li>
-          <li>Specie: {specie}</li>
-        </ul>
-      </div>
-    </ContainerCard>
+    <CardContainer>
+      <CardImage>
+        <img src={image} alt={`${name}`} />
+      </CardImage>
+      <CardInfo>
+        <CardName>{name}</CardName>
+        <CardDetails>
+          <CardDetailsItem>
+            Genre:
+            {genre}
+          </CardDetailsItem>
+          <CardDetailsItem>
+            Specie:
+            {specie}
+          </CardDetailsItem>
+        </CardDetails>
+      </CardInfo>
+    </CardContainer>
   );
 }
+
+export default CardCharacter;

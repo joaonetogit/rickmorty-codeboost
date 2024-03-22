@@ -1,6 +1,6 @@
 # Projeto RickMorty CodeBoost
 
-Este projeto é um exemplo de aplicação web que utiliza React como framework de desenvolvimento, Yarn como gerenciador de pacotes, ViteJS como bundler, AosJS para animações de entrada e AXIOS para conexão com a API Rick and Morty.
+Este projeto é um exemplo de aplicação web que utiliza React como framework de desenvolvimento, pnpm como gerenciador de pacotes, ViteJS como bundler, AosJS para animações de entrada e Axios para conexão com a API Rick and Morty.
 
 Você pode visualizar o projeto online através do seguinte link: [RickMorty CodeBoost](https://api-rickmorty-codeboost.netlify.app/)
 
@@ -15,7 +15,7 @@ Você pode visualizar o projeto online através do seguinte link: [RickMorty Cod
 Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
 
 - Node.js (versão 12 ou superior)
-- Yarn (gerenciador de pacotes)
+- PNPM (gerenciador de pacotes)
 
 ## Instalação
 
@@ -33,10 +33,10 @@ Siga as instruções abaixo para configurar e executar o projeto localmente:
    cd rickmorty-codeboost
    ```
 
-3. Instale as dependências do projeto utilizando o Yarn:
+3. Instale as dependências do projeto utilizando o pnpm:
 
    ```
-   yarn install
+   pnpm install
    ```
 
 ## Uso
@@ -44,14 +44,14 @@ Siga as instruções abaixo para configurar e executar o projeto localmente:
 Após a instalação, você pode executar o projeto localmente com o seguinte comando:
 
 ```
-yarn dev
+pnpm dev
 ```
 
 Isso iniciará o servidor de desenvolvimento e você poderá acessar o projeto no seu navegador através do endereço `http://localhost:3000`.
 
 ## Configuração da API Rick and Morty
 
-O projeto utiliza a API Rick and Morty para obter os dados dos personagens. Não é necessário configurar nada, pois a conexão já está pré-configurada. 
+O projeto utiliza a API Rick and Morty para obter os dados dos personagens. Não é necessário configurar nada, pois a conexão já está pré-configurada.
 
 ## Contribuição
 

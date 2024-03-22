@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContainerCard = styled.div`
+export const CardContainer = styled.div`
   width: 100%;
   background-color: #151020;
   border-radius: 0.4rem;
@@ -14,50 +14,52 @@ export const ContainerCard = styled.div`
       }
     }
   }
+`;
 
-  .image {
+export const CardImage = styled.div`
+  width: 100%;
+  height: 24.3rem;
+  overflow: hidden;
+  border-radius: 0.4rem;
+
+  img {
     width: 100%;
-    height: 24.3rem;
-    overflow: hidden;
-    border-radius: 0.4rem;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: all 0.3s ease;
-    }
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
   }
+`;
 
-  .info {
-    margin-top: 1.6rem;
+export const CardInfo = styled.div`
+  margin-top: 1.6rem;
+`;
 
-    .name {
-      font-size: 1.8rem;
-      margin-bottom: 0.8rem;
-    }
+export const CardName = styled.h3`
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+`;
 
-    .details {
-      list-style: none;
-      display: flex;
+export const CardDetails = styled.ul`
+  list-style: none;
+  display: flex;
+`;
 
-      li {
-        display: block;
-        font-size: 1.4rem;
+export const CardDetailsItem = styled.li`
+  li {
+    display: block;
+    font-size: 1.4rem;
 
-        &:last-child {
-          &:before {
-            content: '';
-            display: inline-block;
-            width: 4px;
-            height: 4px;
-            background-color: #fff;
-            vertical-align: middle;
-            opacity: 0.4;
-            border-radius: 50%;
-            margin: 0 0.8rem;
-          }
-        }
+    &:last-child {
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        background-color: #fff;
+        vertical-align: middle;
+        opacity: 0.4;
+        border-radius: 50%;
+        margin: 0 0.8rem;
       }
     }
   }
