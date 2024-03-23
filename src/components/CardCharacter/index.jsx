@@ -2,6 +2,8 @@ import {
   CardContainer,
   CardDetails,
   CardDetailsItem,
+  CardDetailsItemText,
+  CardDetailsItemTextValue,
   CardImage,
   CardInfo,
   CardName,
@@ -19,12 +21,12 @@ function CardCharacter({
         <CardName>{name}</CardName>
         <CardDetails>
           <CardDetailsItem>
-            Genre:
-            {genre}
+            <CardDetailsItemText>Genre:</CardDetailsItemText>
+            <CardDetailsItemTextValue>{genre}</CardDetailsItemTextValue>
           </CardDetailsItem>
           <CardDetailsItem>
-            Specie:
-            {specie}
+            <CardDetailsItemText>Specie:</CardDetailsItemText>
+            <CardDetailsItemTextValue>{specie}</CardDetailsItemTextValue>
           </CardDetailsItem>
         </CardDetails>
       </CardInfo>

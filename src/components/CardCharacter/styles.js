@@ -5,7 +5,6 @@ export const CardContainer = styled.div`
   background-color: #151020;
   border-radius: 0.4rem;
   padding: 2rem;
-  cursor: pointer;
 
   &:hover {
     .image {
@@ -35,32 +34,27 @@ export const CardInfo = styled.div`
 `;
 
 export const CardName = styled.h3`
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 0.8rem;
 `;
 
 export const CardDetails = styled.ul`
   list-style: none;
   display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 `;
 
 export const CardDetailsItem = styled.li`
-  li {
-    display: block;
-    font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+`;
 
-    &:last-child {
-      &:before {
-        content: '';
-        display: inline-block;
-        width: 4px;
-        height: 4px;
-        background-color: #fff;
-        vertical-align: middle;
-        opacity: 0.4;
-        border-radius: 50%;
-        margin: 0 0.8rem;
-      }
-    }
-  }
+export const CardDetailsItemText = styled.p`
+  font-size: 1.2rem;
+`;
+
+export const CardDetailsItemTextValue = styled.p`
+  font-size: 1.4rem;
 `;
