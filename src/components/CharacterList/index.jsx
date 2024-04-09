@@ -1,28 +1,14 @@
 import React from 'react';
 import CardCharacter from '../CardCharacter';
-import LoadMore from '../LoadMore';
-import { ContentCharacters, GridCharacters } from './styles';
+import { SGridCharacters } from './styles';
 
-export default function CharacterList({
-  characters, page, setPage, countPages,
-}) {
+export default function CharacterList({ characters }) {
   return (
-    <ContentCharacters data-aos="fade-up" data-aos-delay="1000">
-      <GridCharacters>
-        {characters
-          && characters.map(({
-            id, image, name, species, gender,
-          }) => (
-            <CardCharacter
-              key={id}
-              image={image}
-              name={name}
-              genre={gender}
-              specie={species}
-            />
-          ))}
-      </GridCharacters>
-      {!(page === countPages) && <LoadMore page={page} setPage={setPage} />}
-    </ContentCharacters>
+    <SGridCharacters data-aos="fade-up" data-aos-delay="200">
+      {characters
+        && characters.map((charact) => (
+          <CardCharacter key={charact.id} charact={charact} />
+        ))}
+    </SGridCharacters>
   );
 }

@@ -1,13 +1,15 @@
-import Application from './components/Application';
+import QueryProvider from './context/QueryProvider';
+import useAos from './hooks/useAos';
+import RouterComponent from './route';
 import GlobalStyle from './styles/global';
 
-function App() {
+export default function App() {
+  useAos();
+
   return (
-    <>
+    <QueryProvider>
       <GlobalStyle />
-      <Application />
-    </>
+      <RouterComponent />
+    </QueryProvider>
   );
 }
-
-export default App;

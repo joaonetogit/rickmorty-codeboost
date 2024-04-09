@@ -1,9 +1,9 @@
 /* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
 
-export const SLoader = styled.div`
-  z-index: 2022;
+export const SWrapperCharacters = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 2.4rem;
 `;

@@ -1,17 +1,29 @@
 import React from 'react';
 import Logo from '../../assets/logo.png';
-import { HeaderApp } from './styles';
+import {
+  SHeader,
+  SHeaderButtonLogo,
+  SHeaderLogo,
+  SHeaderText,
+  SHeaderTitle,
+  SHeaderWrapperTexts,
+} from './styles';
 
-function Header({ numberCharacters }) {
+export default function Header({ numberCharacters, onClickLogo }) {
   return (
-    <HeaderApp>
-      <img src={Logo} alt="Logo" data-aos="fade-right" data-aos-delay="200" />
-      <span data-aos="fade-left" data-aos-delay="200">
-        Número de personagens:
-        {` ${numberCharacters}`}
-      </span>
-    </HeaderApp>
+    <SHeader>
+      <SHeaderButtonLogo
+        type="button"
+        onClick={onClickLogo}
+        data-aos="fade-right"
+        data-aos-delay="200"
+      >
+        <SHeaderLogo src={Logo} alt="Logo" />
+      </SHeaderButtonLogo>
+      <SHeaderWrapperTexts data-aos="fade-left" data-aos-delay="200">
+        <SHeaderTitle>Número de personagens:</SHeaderTitle>
+        <SHeaderText>{` ${numberCharacters}`}</SHeaderText>
+      </SHeaderWrapperTexts>
+    </SHeader>
   );
 }
-
-export default Header;

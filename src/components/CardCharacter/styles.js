@@ -1,60 +1,49 @@
 import styled from 'styled-components';
 
-export const CardContainer = styled.div`
+export const SCardContainer = styled.div`
   width: 100%;
   background-color: #151020;
   border-radius: 0.4rem;
   padding: 2rem;
 
   &:hover {
-    .image {
-      img {
-        transform: scale(1.1);
-      }
+    img {
+      transform: scale(1.1);
     }
   }
 `;
 
-export const CardImage = styled.div`
+export const SCardImageContaniner = styled.div`
   width: 100%;
   height: 24.3rem;
   overflow: hidden;
   border-radius: 0.4rem;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.3s ease;
-  }
 `;
 
-export const CardInfo = styled.div`
+export const SCardImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+`;
+
+export const SCardInfo = styled.div`
   margin-top: 1.6rem;
 `;
 
-export const CardName = styled.h3`
-  font-size: 2rem;
+export const SCardName = styled.h3`
+  font-size: 1.8rem;
   margin-bottom: 0.8rem;
 `;
 
-export const CardDetails = styled.ul`
+export const SCardDetails = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 `;
 
-export const CardDetailsItem = styled.li`
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-`;
-
-export const CardDetailsItemText = styled.p`
-  font-size: 1.2rem;
-`;
-
-export const CardDetailsItemTextValue = styled.p`
+export const SCardDetailsItem = styled.li`
+  display: block;
   font-size: 1.4rem;
 `;

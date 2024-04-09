@@ -11,12 +11,16 @@
     "lint": "pnpm style && pnpm formatting"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.28.6",
+    "aos": "^2.3.4",
     "axios": "^1.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^5.28.6",
     "@types/react": "^18.2.67",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
