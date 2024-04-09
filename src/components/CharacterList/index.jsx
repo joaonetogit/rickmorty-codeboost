@@ -4,7 +4,7 @@ import { SGridCharacters } from './styles';
 
 export default function CharacterList({ characters }) {
   return (
-    <SGridCharacters>
+    <SGridCharacters data-aos="fade-up" data-aos-delay="200">
       {characters
         && characters.map((charact) => (
           <CardCharacter key={charact.id} charact={charact} />
