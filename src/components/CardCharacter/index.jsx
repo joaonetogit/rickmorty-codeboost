@@ -1,35 +1,32 @@
 import {
-  CardContainer,
-  CardDetails,
-  CardDetailsItem,
-  CardImage,
-  CardInfo,
-  CardName,
+  SCardContainer,
+  SCardDetails,
+  SCardDetailsItem,
+  SCardImage,
+  SCardImageContaniner,
+  SCardInfo,
+  SCardName,
 } from './styles';
 
-function CardCharacter({
-  image, name, genre, specie,
-}) {
+export default function CardCharacter({ charact }) {
   return (
-    <CardContainer>
-      <CardImage>
-        <img src={image} alt={`${name}`} />
-      </CardImage>
-      <CardInfo>
-        <CardName>{name}</CardName>
-        <CardDetails>
-          <CardDetailsItem>
+    <SCardContainer>
+      <SCardImageContaniner>
+        <SCardImage src={charact.image} alt={`${charact.name}`} />
+      </SCardImageContaniner>
+      <SCardInfo>
+        <SCardName>{charact.name}</SCardName>
+        <SCardDetails>
+          <SCardDetailsItem>
             Genre:
-            {` ${genre}`}
-          </CardDetailsItem>
-          <CardDetailsItem>
+            {` ${charact.gender}`}
+          </SCardDetailsItem>
+          <SCardDetailsItem>
             Specie:
-            {` ${specie}`}
-          </CardDetailsItem>
-        </CardDetails>
-      </CardInfo>
-    </CardContainer>
+            {` ${charact.species}`}
+          </SCardDetailsItem>
+        </SCardDetails>
+      </SCardInfo>
+    </SCardContainer>
   );
 }
-
-export default CardCharacter;

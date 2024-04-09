@@ -1,7 +1,6 @@
-/* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
 
-export const HeaderApp = styled.div`
+export const SHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,13 +13,27 @@ export const HeaderApp = styled.div`
     align-items: flex-start;
     gap: 1.6rem;
   }
+`;
 
-  h1 {
-    font-size: 3.2rem;
-  }
+export const SHeaderButtonLogo = styled.button`
+  background: none;
+`;
 
-  span {
-    font-size: 1.6rem;
-    opacity: 0.75;
-  }
+export const SHeaderLogo = styled.img`
+  cursor: pointer;
+`;
+
+export const SHeaderWrapperTexts = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+`;
+
+export const SHeaderTitle = styled.p`
+  font-size: 1.8rem;
+`;
+
+export const SHeaderText = styled.p`
+  font-size: 2.4rem;
+  font-weight: 600;
 `;

@@ -1,14 +1,12 @@
 import React from 'react';
 import IconLoader from '../../assets/loader.gif';
 
-import { LoaderApp } from './styles';
+import { SLoader } from './styles';
 
-function Loader() {
+export default function Loader() {
   return (
-    <LoaderApp>
+    <SLoader>
       <img src={IconLoader} alt="Loader" />
-    </LoaderApp>
+    </SLoader>
   );
 }
-
-export default Loader;

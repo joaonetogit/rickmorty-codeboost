@@ -1,16 +1,15 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import Application from './components/Application';
+import QueryProvider from './context/QueryProvider';
+import useAos from './hooks/useAos';
+import RouterComponent from './route';
 import GlobalStyle from './styles/global';
 
-const queryClient = new QueryClient();
+export default function App() {
+  useAos();
 
-function App() {
   return (
-    <QueryClientProvider client={queryClient}>
+    <QueryProvider>
       <GlobalStyle />
-      <Application />
-    </QueryClientProvider>
+      <RouterComponent />
+    </QueryProvider>
   );
 }
-
-export default App;
