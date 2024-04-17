@@ -1,11 +1,12 @@
+import CardCharacterListDetails from '../CardCharacterListDetails';
+import CardCharacterStatus from '../CardCharacterStatus';
 import {
   SCardContainer,
-  SCardDetails,
-  SCardDetailsItem,
   SCardImage,
   SCardImageContaniner,
   SCardInfo,
   SCardName,
+  SCardWrapperName,
 } from './styles';
 
 export default function CardCharacter({ charact }) {
@@ -15,17 +16,11 @@ export default function CardCharacter({ charact }) {
         <SCardImage src={charact.image} alt={`${charact.name}`} />
       </SCardImageContaniner>
       <SCardInfo>
-        <SCardName>{charact.name}</SCardName>
-        <SCardDetails>
-          <SCardDetailsItem>
-            Genre:
-            {` ${charact.gender}`}
-          </SCardDetailsItem>
-          <SCardDetailsItem>
-            Specie:
-            {` ${charact.species}`}
-          </SCardDetailsItem>
-        </SCardDetails>
+        <SCardWrapperName>
+          <SCardName>{charact.name}</SCardName>
+          <CardCharacterStatus status={charact.status} />
+        </SCardWrapperName>
+        <CardCharacterListDetails charact={charact} />
       </SCardInfo>
     </SCardContainer>
   );

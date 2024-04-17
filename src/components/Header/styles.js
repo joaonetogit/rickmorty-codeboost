@@ -8,7 +8,7 @@ export const SHeader = styled.header`
   margin-bottom: 1.6rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
-  @media (max-width: 500px) {
+  @media (max-width: 610px) {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.6rem;
@@ -26,7 +26,7 @@ export const SHeaderLogo = styled.img`
 export const SHeaderWrapperTexts = styled.div`
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 0.8rem;
 `;
 
 export const SHeaderTitle = styled.p`

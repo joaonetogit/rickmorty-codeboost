@@ -1,17 +1,21 @@
 import { useQuery } from '@tanstack/react-query';
+import { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import fetchCharacters from '../services/fetchCharacters';
+import scrollToTop from '../utils/scrollTop';
 
 export default function useApp() {
   const [page, setPage] = useSearchParams({ page: 1 });
   const pageNow = parseInt(page.get('page'), 10);
 
-  const {
-    data, isLoading, isFetching, isError,
-  } = useQuery({
+  const { data, isLoading, isError } = useQuery({
     queryKey: ['characters', pageNow],
     queryFn: () => fetchCharacters(pageNow),
   });
+
+  useEffect(() => {
+    scrollToTop();
+  }, [pageNow]);
 
   function goToFirstPage() {
     setPage((prev) => {
@@ -20,27 +24,31 @@ export default function useApp() {
     });
   }
 
-  function handlePrevPage() {
-    if (pageNow === 1) return;
+  function handleSetPage(mode) {
     setPage((prev) => {
-      prev.set('page', pageNow - 1);
+      prev.set('page', mode === 'plus' ? pageNow + 1 : pageNow - 1);
       return prev;
     });
   }
 
+  function disableHandlePagination() {
+    return pageNow === 1 || pageNow === data?.info.pages;
+  }
+
+  function handlePrevPage() {
+    disableHandlePagination();
+    handleSetPage('minus');
+  }
+
   function handleNextPage() {
-    if (pageNow === data?.info.pages) return;
-    setPage((prev) => {
-      prev.set('page', pageNow + 1);
-      return prev;
-    });
+    disableHandlePagination();
+    handleSetPage('plus');
   }
 
   return {
     numberCharacters: data?.info.count || 0,
     characters: data?.results || [],
     countPages: data?.info.pages || 0,
-    isFetching,
     isLoading,
     isError,
     page: pageNow,

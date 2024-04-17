@@ -24,6 +24,7 @@ export const SCardImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
   transition: all 0.3s ease;
 `;
 
@@ -31,19 +32,17 @@ export const SCardInfo = styled.div`
   margin-top: 1.6rem;
 `;
 
-export const SCardName = styled.h3`
-  font-size: 1.8rem;
-  margin-bottom: 0.8rem;
-`;
-
-export const SCardDetails = styled.ul`
-  list-style: none;
+export const SCardWrapperName = styled.div`
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   gap: 0.8rem;
+  margin-bottom: 0.8rem;
+  padding: 0 0 0.8rem;
+  border-bottom: 1px solid #2d2d2d;
 `;
 
-export const SCardDetailsItem = styled.li`
-  display: block;
-  font-size: 1.4rem;
+export const SCardName = styled.h3`
+  font-size: 2rem;
+  font-weight: bold;
 `;

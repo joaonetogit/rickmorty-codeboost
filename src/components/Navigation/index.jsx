@@ -8,11 +8,11 @@ export default function Navigation({ prevAction, nextAction }) {
 
   return (
     <SNavigation>
-      <Button disabled={page === 1} onClick={prevAction} label="Anterior" />
+      <Button disabled={page === 1} onClick={prevAction} label="Previous" />
       <Button
         disabled={page === countPages}
         onClick={nextAction}
-        label="Próximo"
+        label="Next"
       />
     </SNavigation>
   );

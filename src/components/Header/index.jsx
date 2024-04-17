@@ -21,8 +21,8 @@ export default function Header({ numberCharacters, onClickLogo }) {
         <SHeaderLogo src={Logo} alt="Logo" />
       </SHeaderButtonLogo>
       <SHeaderWrapperTexts data-aos="fade-left" data-aos-delay="200">
-        <SHeaderTitle>Número de personagens:</SHeaderTitle>
-        <SHeaderText>{` ${numberCharacters}`}</SHeaderText>
+        <SHeaderTitle>Number of characters:</SHeaderTitle>
+        <SHeaderText>{numberCharacters}</SHeaderText>
       </SHeaderWrapperTexts>
     </SHeader>
   );

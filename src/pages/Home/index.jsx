@@ -10,7 +10,6 @@ import { ContainerApp, MainApp } from './styles';
 export default function Home() {
   const {
     goToFirstPage,
-    isFetching,
     isLoading,
     numberCharacters,
     characters,
@@ -26,11 +25,7 @@ export default function Home() {
           onClickLogo={goToFirstPage}
         />
         <WrapperCharacters>
-          {isFetching || isLoading ? (
-            <Loader />
-          ) : (
-            <CharacterList characters={characters} />
-          )}
+          {isLoading ? <Loader /> : <CharacterList characters={characters} />}
           <Navigation nextAction={handleNextPage} prevAction={handlePrevPage} />
         </WrapperCharacters>
       </ContainerApp>
