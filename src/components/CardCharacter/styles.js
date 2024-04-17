@@ -45,4 +45,5 @@ export const SCardWrapperName = styled.div`
 export const SCardName = styled.h3`
   font-size: 2rem;
   font-weight: bold;
+  flex: 1;
 `;
