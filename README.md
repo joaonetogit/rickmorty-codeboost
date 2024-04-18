@@ -1,72 +1,11 @@
-# Projeto RickMorty CodeBoost
+# Rick and Morty Project
 
-Este projeto é um exemplo de aplicação web que utiliza React como framework de desenvolvimento, pnpm como gerenciador de pacotes, ViteJS como bundler, AosJS para animações de entrada e Axios para conexão com a API Rick and Morty.
+This project is an example of a web application that uses React as the development framework, pnpm as the package manager, ViteJS as the bundler, AosJS for the input animations and React Query with Axios to connect to the Rick and Morty API.
 
-Você pode visualizar o projeto online através do seguinte link: [RickMorty CodeBoost](https://api-rickmorty-codeboost.netlify.app/)
+You can view the project online via the following link: [RickMorty](https://rickmorty-api.vercel.app/)
 
-## Funcionalidades
+## Functionalities
 
-- Visualização e busca de informações sobre personagens da série Rick and Morty.
-- Animações de entrada utilizando AosJS.
-- Integração com a API Rick and Morty para obter os dados dos personagens.
-
-## Pré-requisitos
-
-Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
-
-- Node.js (versão 12 ou superior)
-- PNPM (gerenciador de pacotes)
-
-## Instalação
-
-Siga as instruções abaixo para configurar e executar o projeto localmente:
-
-1. Clone este repositório em sua máquina local:
-
-   ```
-   git clone https://github.com/joaonetogit/rickmorty-codeboost.git
-   ```
-
-2. Navegue até o diretório raiz do projeto:
-
-   ```
-   cd rickmorty-codeboost
-   ```
-
-3. Instale as dependências do projeto utilizando o pnpm:
-
-   ```
-   pnpm install
-   ```
-
-## Uso
-
-Após a instalação, você pode executar o projeto localmente com o seguinte comando:
-
-```
-pnpm dev
-```
-
-Isso iniciará o servidor de desenvolvimento e você poderá acessar o projeto no seu navegador através do endereço `http://localhost:3000`.
-
-## Configuração da API Rick and Morty
-
-O projeto utiliza a API Rick and Morty para obter os dados dos personagens. Não é necessário configurar nada, pois a conexão já está pré-configurada.
-
-## Contribuição
-
-Contribuições são bem-vindas! Se você quiser contribuir para este projeto, siga as etapas abaixo:
-
-1. Fork este repositório.
-2. Crie uma branch com a sua feature ou correção de bug: `git checkout -b minha-feature`.
-3. Faça as alterações desejadas e faça commit delas: `git commit -m 'Minha nova feature'`.
-4. Envie para o branch principal: `git push origin minha-feature`.
-5. Abra uma Pull Request.
-
-## Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
-
-## Contato
-
-Se você tiver alguma dúvida ou sugestão em relação a este projeto, sinta-se à vontade para entrar em contato comigo através do e-mail [joaoneto.work@gmail.com] ou visite meu perfil no [meu GitHub](https://github.com/joaonetogit).
+- Visualization and search for information on characters from the Rick and Morty series.
+- Input animations using AosJS.
+- Integration with the Rick and Morty API to obtain character data.
